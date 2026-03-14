@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.97 0 0;
+    --foreground: 0.14 0.01 260;
+    --card: 1 0 0;
+    --card-foreground: 0.14 0.01 260;
+    --popover: 1 0 0;
+    --popover-foreground: 0.14 0.01 260;
+    --primary: 0.42 0.275 296;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.95 0.005 260;
+    --secondary-foreground: 0.14 0.01 260;
+    --muted: 0.95 0.005 260;
+    --muted-foreground: 0.52 0.015 260;
+    --accent: 0.91 0.01 260;
+    --accent-foreground: 0.14 0.01 260;
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 1 0 0;
+    --border: 0.91 0.008 260;
+    --input: 0.91 0.008 260;
+    --ring: 0.42 0.275 296;
+    --radius: 1rem;
+    --nubank-blue: 0.6 0.15 230;
+    --sidebar: 0.42 0.275 296;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 1 0 0;
+    --sidebar-primary-foreground: 0.42 0.275 296;
+    --sidebar-accent: 0.52 0.24 296;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.52 0.24 296;
+    --sidebar-ring: 1 0 0;
+    --chart-1: 0.42 0.275 296;
+    --chart-2: 0.6 0.15 230;
+    --chart-3: 0.65 0.15 296;
+    --chart-4: 0.75 0.1 296;
+    --chart-5: 0.88 0.05 296;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Progress bar blue override for credit card */
+.nu-progress [data-slot="progress-indicator"] {
+  background-color: #009ee3 !important;
+}
+.nu-progress {
+  background-color: #e8f7fd !important;
+}
